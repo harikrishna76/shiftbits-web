@@ -14,14 +14,19 @@
     "fix": "yarn run fix-js && yarn run fix-css"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "axios": "^0.20.0",
     "next": "9.5.3",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-router-dom": "^5.2.0",
+    "sass": "^1.26.10"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.9.0",
     "eslint-config-airbnb": "^18.2.0",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",

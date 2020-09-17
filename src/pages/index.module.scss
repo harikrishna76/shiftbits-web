@@ -1,0 +1,230 @@
+.homeRoot{
+}
+
+.homeBannerSection {
+  height: calc(100vh - 6.3rem);
+  display: flex;
+  flex-direction: column !important;
+}
+
+.heading1 {
+  padding: 2rem 0 1rem;
+  line-height: 1.2;
+}
+
+.homeHeading1 {
+  font-size: 4.5rem;
+}
+
+.homeHeading2 {
+  font-size: 4.25rem;
+}
+
+.homeHeading3 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: 3.6px;
+  color: #6b6c6f;
+  margin-top: 2rem;
+}
+
+.bannerImageContainer {
+  display: flex;
+  width: 33%;
+  height: 60vh;
+  object-fit: cover;
+  flex: 1;
+}
+
+.bannerImageContainer img {
+  object-fit: cover;
+  width: auto;
+  height: 100%;
+}
+
+.homeMain {
+  padding: 3rem 0;
+}
+
+.homeImage1 {
+  text-align: left;
+  object-fit: cover;
+  width: 100%;
+  margin-top: -15vh;
+}
+
+.homeImage2 {
+  text-align: right;
+  float: right;
+  margin-top: -10vh;
+}
+
+.fontSize64 {
+  font-size: 4rem !important;
+}
+
+.fontSize40 {
+  font-size: 2.5rem !important;
+}
+
+.fontSize24 {
+  font-size: 1.5rem !important;
+}
+
+.fontSize20 {
+  font-size: 1.25rem;
+}
+
+.featuresButton {
+  width: 19.68rem;
+  height: 3.625rem;
+  border: 2px solid #21bf73;
+  border-radius: 5px;
+  margin-top: 2.5rem;
+}
+
+.featureImage1 {
+  width: 42.56rem;
+  height: 26.6rem;
+}
+
+.featureImage2 {
+  width: 46.875rem;
+  height: 30rem;
+}
+
+.featureImage3 {
+  width: 38.81rem;
+  height: 34.68rem;
+}
+
+.featureImage4 {
+  width: 32.3rem;
+  height: 29.625rem;
+}
+
+.featureImage5 {
+  width: 33.68rem;
+  height: 29.75rem;
+}
+
+.featureImage6 {
+  width: 36.56rem;
+  height: 44.4rem;
+}
+
+.flexColumn {
+  flex-direction: column;
+}
+
+.featureContainer {
+  margin-bottom: 16.3rem;
+  width: 100%;
+}
+
+.marginBottomHeading {
+  padding: 0 0 66px !important;
+}
+
+.iconBox {
+  width: 5.375rem;
+  height: 5.375rem;
+  border-radius: 1.56rem;
+  margin-right: 2.5rem;
+  flex-shrink: 0;
+}
+
+.marginV32 {
+  margin: 32px 0 !important;
+  align-items: center;
+}
+
+.bgLightGreen {
+  background-color: rgba(33, 191, 115, 0.1);
+}
+
+.bgLightRed {
+   background-color: rgba(255, 81, 43, 0.1);
+}
+
+.bgLightPurple {
+  background-color: rgba(109, 117, 182, 0.1);
+}
+
+.buySellContainer {
+  border-radius: 5px;
+  box-shadow: 0 0 200px 0 rgba(25, 26, 31, 0.04);
+  background-color: #ffffff;
+  margin-top: 4rem;
+}
+
+.buySellTabRoot {
+  min-width: 0 !important;
+  opacity: 1 !important;
+  font-size: 1.25rem !important;
+  color: #a3a3a5 !important;
+  font-weight: bold !important;
+  text-transform: none !important;
+  box-shadow: inset 2px 0 5px 0 rgba(25, 26, 31, 0.05);
+  width: 14.625rem;
+  background-color: rgba(25, 26, 31, 0.05) !important;
+}
+
+.buySellTabIndicator {
+  height: 0 !important;
+}
+
+.selectedBuySellTab {
+  color: #21bf73 !important;
+  background-color: #ffffff !important;
+  box-shadow: none;
+}
+
+.buyButton {
+  background-color: #21bf73;
+  color: #ffffff;
+  height: 3.75rem;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 22px;
+}
+
+.margin24 {
+  margin: 24px;
+}
+
+.black60 {
+  color: #6b6c6f;
+}
+
+.fieldContainer {
+  padding: 10px 16px;
+  border-radius: 5px;
+  border: 0.5px solid #d1d1d2;
+}
+
+.transactionIconContainer {
+  width: 28px;
+  height: 28px;
+  border-radius: 16px;
+  border: 0.5px solid #6b6c6f;
+  transform: rotate(90deg);
+  margin: 32px auto;
+}
+
+.marginT22 {
+  margin-top: 22px;
+}
+
+.launchingSoon {
+  font-size: 4rem !important;
+  margin-top: 30px;
+}
+
+.inputField {
+  border-width: 0;
+}
+
+.inputField:focus {
+  outline: none;
+}

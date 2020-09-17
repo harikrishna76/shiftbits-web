@@ -1,0 +1,364 @@
+body {
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 16px;
+}
+
+input:disabled {
+  background: transparent;
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 8.56px;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 10.67px;
+  }
+}
+
+@media (min-width: 1366px) {
+  html {
+    font-size: 11.69px;
+  }
+}
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1680px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+.root {
+  min-height: 100vh;
+  font-family: 'Gilroy';
+}
+
+.left {
+  display: flex;
+  background-color: #f9f6f9;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.imageContainer {
+  margin-top: 60px;
+  min-height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: url('/coming-soon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.rightContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.spaceBetween {
+  display: flex;
+  justify-content: space-between;;
+  align-items: center;
+}
+
+.fontWeightBold {
+  font-weight: bold !important;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+.greenColor {
+  color: #21bf73;
+}
+
+.text {
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+.text1 {
+  background-image: linear-gradient(to right, #ddcf53, #21bf73);
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -1.28px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.text2 {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1.2;
+  letter-spacing: -1.4px;
+  color: #191a1f;
+  text-align: center;
+}
+
+.text3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: 3.6px;
+  color: #bababc;
+  margin-top: 32px;
+}
+
+.text4 {
+  font-size: 2rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #191a1f;
+}
+
+.text5 {
+  font-size: 1.125rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #6b6c6f;
+}
+
+.text6 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: 3.6px;
+  color: #21bf73;
+  margin-top: 32px;
+  text-align: center;
+}
+
+.blinking{
+	animation: blinkingText 1s infinite;
+}
+
+.currencyIcons {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  position: relative;
+  margin-top: 50px;
+  align-self: center;
+}
+
+.currencyIcons .coin1 {
+  animation: MoveDownUp 4s ease infinite, coinSpin 4s ease infinite;
+  position: absolute;
+  left: 0;
+}
+
+.currencyIcons .coin2{
+  animation: MoveUpDown 4s ease infinite, coinSpin 4s ease infinite;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.currencyIcons img {
+  height: 80px;
+  width: 80px;
+}
+
+.subscribeContainer {
+  display: flex;
+  margin-top: 32px;
+  max-width: 734px;
+  width: 100%;
+}
+
+.subscribeContainer input {
+  display: flex;
+  padding: 0 16px;
+  flex: 1;
+  border-radius: 5px;
+  border: solid 0.5px #a3a3a5;
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 1.2rem;
+}
+
+.subscribeContainer input:focus {
+  outline: none
+}
+
+.subscribeContainer .btn {
+  width: 182px;
+  height: 72px;
+  background-color: #21bf73;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: coinSpin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes coinSpin {
+  50% {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 75px;
+  }
+}
+
+@keyframes MoveDownUp {
+  0%, 100% {
+    top: 0;
+  }
+  50% {
+    top: 75px;
+  }
+}
+
+@keyframes blinkingText{
+	0%{		color: #21bf73;	}
+	50%{	color: transparent;	}
+	100%{	color: #21bf73;	}
+}
+
+@media (max-width: 1280px) {
+  .text, .text2 {
+    font-size: 3rem;
+  }
+
+  .text3 {
+    font-size: 1rem;
+  }
+
+  .text4 {
+    font-size: 2rem;
+  }
+
+  .text5 {
+    font-size: 1.125rem;
+  }
+
+  .text6 {
+    font-size: 1.5rem;
+  }
+
+  .subscribeContainer input {
+    width: 70%;
+  }
+
+  .subscribeContainer .btn {
+    width: auto;
+    padding: 16px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .text1, .text2 {
+    font-size: 2rem;
+  }
+
+  .text3 {
+    font-size: 1rem;
+  }
+
+  .text4 {
+    font-size: 2rem;
+  }
+
+  .text5 {
+    font-size: 1.125rem;
+  }
+
+  .text6 {
+    font-size: 1.5rem;
+  }
+}

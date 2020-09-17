@@ -1,0 +1,195 @@
+.cryptoSubheader {
+  border: 1px solid #d1d1d2;
+  border-radius: 5px;
+  margin: 48px 72px;
+}
+.cryptoIndicator {
+  background-color: #21bf73 !important;
+  height: 3px !important;
+}
+.cryptoTabRoot {
+  min-width: 0 !important;
+  max-width: none !important;
+  opacity: 1 !important;
+  color: #a3a3a5 !important;
+  font-weight: bold !important;
+  text-transform: none !important;
+  padding: 16px 32px !important;
+  border-left: 1px solid #d1d1d2 !important;
+  font-size: 1rem !important;
+}
+
+.cryptoTabRoot:first-child {
+  border-left: 0 !important;
+}
+
+.cryptoSelectedTab {
+  color: #21bf73 !important;
+}
+
+.CryptoForNewbiesH1 {
+  /* font-family: HelveticaLTStd; */
+  font-size: 3rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #191a1f;
+}
+
+.CryptoForNewbiesBannerImg {
+  width: 100%;
+  height: 100%;
+}
+
+.introduction {
+  background-color: #e9f9f1;
+  padding: 2rem 0;
+}
+
+.greyText {
+  color: #6b6c6f;
+}
+
+.introductionSubtitle {
+  margin: 28px 0;
+  border-left: 4px solid #21bf73;
+  padding-left: 32px;
+  /* font-family: HelveticaLTStd-Roman; */
+  font-size: 1.75rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #6b6c6f;
+}
+
+.cryptoFooter {
+  background-color: #e9f9f1;
+  padding: 1rem 3rem;
+  border: 2px solid #21bf73;
+  border-radius: 5px;
+  margin: 48px 0;
+  cursor: pointer;
+}
+
+.greenText {
+  color: #21bf73;
+}
+
+.nextTopic {
+  cursor: pointer;
+}
+
+.cryptoContent {
+  margin: 0;
+}
+
+.CryptoForNewbiesHeadLine {
+  height: 76px;
+  /* font-family: HelveticaLTStd; */
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #21bf73;
+  margin-bottom: 2rem !important;
+  padding-left: 2rem;
+  border-left: 0.5rem solid #21bf73;
+}
+
+.CryptoForNewbiesUL {
+  padding-left: 0;
+  margin-top: 80px;
+  display: flex;
+}
+
+.CryptoForNewbiesUL li {
+  /* font-family: HelveticaLTStd-Roman; */
+  font-size: 1.125rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: #191a1f;
+  margin-bottom: 2rem;
+  margin-left: 1.3rem;
+}
+
+.historyQuestion {
+  /* font-family: HelveticaLTStd; */
+  font-size: 2.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: #191a1f;
+  margin-bottom: 1.5rem;
+}
+
+.historyAnswer {
+  /* font-family: HelveticaLTStd-Roman; */
+  font-size: 1.125rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: #191a1f;
+  margin-bottom: 2rem !important;
+}
+
+.basicKeyQuestions {
+  background: #e9f9f1;
+  border-radius: 5px;
+  margin-bottom: 2rem !important;
+  padding: 3rem 2.5rem 1rem;
+}
+
+.advantagesText1 {
+  /* font-family: HelveticaLTStd; */
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #21bf73;
+  margin-bottom: 1.8125rem;
+}
+
+.advantagesText2 {
+  margin-bottom: 1.125rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.6;
+  color: #191a1f;
+}
+
+.advantagesText3 {
+  /* font-family: HelveticaLTStd-Roman; */
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #191a1f;
+  margin-bottom: 2rem;
+}
+
+.advantagesHeading {
+  color: #21bf73;
+}
+
+.contentContainer {
+  margin-top: 80px;
+  border: 0.5px solid #d1d1d2;
+  border-radius: 5px;
+  padding: 32px;
+}
+
+.contentItem {
+  font-size: 1.125rem;
+  margin: 8px 0;
+}
+
+.contentsHeading {
+  margin-bottom: 1.5rem;
+}

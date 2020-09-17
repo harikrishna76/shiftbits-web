@@ -1,0 +1,90 @@
+.aboutUsTitle {
+  font-size: 13rem !important;
+  font-weight: 900 !important;
+  color: #21bf73;
+  text-align: right;
+  line-height: 0.8;
+}
+
+.aboutUsText1 {
+  /* font-family: HelveticaLTStd-Roman; */
+  font-size: 1.5rem !important;
+  line-height: 1.5;
+  color: #6b6c6f;
+}
+
+.aboutUsText2 {
+  /* font-family: HelveticaLTStd-Roman; */
+  font-size: 1.5rem !important;
+  line-height: 1.5;
+  color: #6b6c6f;
+  margin-bottom: 2rem !important;
+}
+
+.aboutUsText3 {
+  /* font-family: HelveticaLTStd; */
+  font-size: 3rem !important;
+  font-weight: bold !important;
+  line-height: 1.5;
+  color: #21bf73;
+  margin-bottom: 3rem !important;
+}
+
+.aboutUsText4Banner {
+  background: url('/Group 854.png');
+  background-position: center;
+  background-size: cover;
+  height: 205px;
+}
+
+.aboutUsText4 {
+  /* font-family: HelveticaLTStd; */
+  font-size: 2.25rem !important;
+  font-weight: bold !important;
+  line-height: 1.5;
+  color: white;
+}
+
+.aboutUsText5 {
+  /* font-family: HelveticaLTStd; */
+  font-size: 3rem !important;
+  font-weight: bold !important;
+  line-height: 1.5;
+  color: #191a1f;
+  margin-bottom: 1rem;
+}
+
+.teamMembersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.teamMemberCard {
+  margin: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teamMemberImage {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.memberRole {
+  color: #a3a3a5;
+  font-size: 1rem;
+}
+
+.memberName {
+  font-size: 1.125rem;
+}
+
+.teamSocialIcon {
+  width: 28px;
+  height: 28px;
+  margin: 12px;
+}

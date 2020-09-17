@@ -1,0 +1,32 @@
+.footerRoot {
+  padding: 20px;
+  border-top: 1px solid rgba(209, 209, 210, 0.7);
+}
+
+.footerItem {
+  padding: 20px;
+}
+
+.footerItem a:hover {
+  color: #21bf73;
+  text-decoration: underline;
+}
+
+.greyItem {
+  color: #6b6c6f;
+  padding: 4px 0;
+}
+.heading {
+  padding-bottom: 20px;
+}
+
+.footerSocialImage {
+  margin: 8px 16px;
+  margin-left: 0;
+  width: 32;
+  height: 32;
+}
+
+.footerLink {
+  text-decoration: none;
+}

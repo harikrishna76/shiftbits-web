@@ -1,5 +1,6 @@
 // ESLint configuration
 // http://eslint.org/docs/user-guide/configuring
+
 module.exports = {
   root: true,
   parser: 'babel-eslint',
@@ -26,8 +27,13 @@ module.exports = {
     },
   },
   settings: {
-    react: {
-      version: 'detect',
+    react: { version: 'detect' },
+    'import/resolver': {
+      alias: [
+        ['components', './src/components'],
+        ['styles', './src/styles'],
+        ['@', './src'],
+      ],
     },
   },
   plugins: [],
