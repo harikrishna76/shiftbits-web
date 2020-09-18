@@ -30,7 +30,7 @@ export default function CryptoContentViewer(props) {
         <Grid item xs={12} md={8}>
           <ul className={s.CryptoForNewbiesUL}>
             <Grid item xs={12}>
-              {pageData.map((dataSet) => displayDataSet(dataSet))}
+              {pageData && pageData.map((dataSet) => displayDataSet(dataSet))}
             </Grid>
           </ul>
         </Grid>

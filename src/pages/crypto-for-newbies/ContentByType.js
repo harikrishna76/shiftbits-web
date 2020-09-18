@@ -5,6 +5,10 @@ import s from './CryptoForNewbies.module.scss';
 export default function ContentByType({ item }) {
   let view = null;
 
+  if (!item) {
+    return view;
+  }
+
   const { type, content, className } = item;
 
   if (type === 'li') {

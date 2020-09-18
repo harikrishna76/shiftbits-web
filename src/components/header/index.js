@@ -34,7 +34,13 @@ export default function Header(props) {
         <Toolbar className={styles.toolbar}>
           <div className="flex1">
             <Link href="/">
-              <img src="/images/logo.png" alt="" width="208" height="auto" />
+              <img
+                className={styles.logo}
+                src="/images/logo.png"
+                alt=""
+                width="208"
+                height="auto"
+              />
             </Link>
           </div>
           <div className="flex flex1" style={{ justifyContent: 'center' }}>
