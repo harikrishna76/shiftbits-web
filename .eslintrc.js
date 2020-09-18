@@ -31,6 +31,7 @@ module.exports = {
     'import/resolver': {
       alias: [
         ['components', './src/components'],
+        ['constants', './src/constants'],
         ['styles', './src/styles'],
         ['@', './src'],
       ],

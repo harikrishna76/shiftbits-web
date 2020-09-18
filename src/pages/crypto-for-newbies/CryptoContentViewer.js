@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
+import content from 'constants/CryptoForNewbiesContent';
 import ContentByType from './ContentByType';
-import content from './content';
 import s from './CryptoForNewbies.module.scss';
 
 export default function CryptoContentViewer(props) {
