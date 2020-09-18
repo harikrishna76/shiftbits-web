@@ -4,7 +4,7 @@ import {
 } from '@material-ui/core';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import './Header.module.scss';
+import styles from './Header.module.scss';
 
 const NavigationItems = [
   { key: 'home', label: 'Home', path: '/' },
@@ -29,16 +29,16 @@ export default function Header(props) {
   }
 
   return (
-    <div className="headerRoot">
-      <AppBar position="static" color="inherit" className="appbar">
-        <Toolbar className="toolbar">
+    <div className={styles.headerRoot}>
+      <AppBar position="static" color="inherit" className={styles.appbar}>
+        <Toolbar className={styles.toolbar}>
           <div className="flex1">
             <Link href="/">
               <img src="/images/logo.svg" alt="" />
             </Link>
           </div>
           <div className="flex flex1" style={{ justifyContent: 'center' }}>
-            <img src="/images/Group 852.png" alt="" className="launchingSoonImage" />
+            <img src="/images/Group 852.png" alt="" className={styles.launchingSoonImage} />
           </div>
           <div className="flex flex1" style={{ justifyContent: 'flex-end' }}>
             <Tabs
@@ -49,15 +49,15 @@ export default function Header(props) {
                 router.push(nextItem.path);
               }}
               classes={{
-                indicator: 'indicator',
-                flexContainer: 'tabsFlexContainer',
+                indicator: styles.indicator,
+                flexContainer: styles.tabsFlexContainer,
               }}
             >
               {NavigationItems.map((item, index) => (
                 <Tab
                   key={item.key}
                   label={item.label}
-                  classes={{ root: 'tabRoot', selected: 'selectedTab' }}
+                  classes={{ root: styles.tabRoot, selected: styles.selectedTab }}
                   {...a11yProps(index)}
                 />
               ))}
