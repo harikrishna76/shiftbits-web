@@ -4,7 +4,7 @@ import {
 } from '@material-ui/core';
 import Layout from 'components/layout';
 import CryptoContentViewer from './CryptoContentViewer';
-import './CryptoForNewbies.module.scss';
+import s from './CryptoForNewbies.module.scss';
 
 const cryptoNavigation = [
   { key: 'history', label: 'History' },
@@ -33,14 +33,14 @@ export default function CryptoForNewbies() {
   function displayHeader() {
     const content = headerContent[activeTabIndex];
     return (
-      <Grid container className="introduction" justify="center">
+      <Grid container className={s.introduction} justify="center">
         <Grid container alignItems="center" xs={12} md={9}>
           <Grid item xs={12} md={7}>
             <div>
-              <div variant="h4" className="CryptoForNewbiesH1">
+              <div variant="h4" className={s.CryptoForNewbiesH1}>
                 {content.title}
               </div>
-              <div className="introductionSubtitle greyText">
+              <div className={`${s.introductionSubtitle} greyText`}>
                 {content.description}
               </div>
               <Typography className="greyText">Updated July 15, 2020 &bull; 10 min read</Typography>
@@ -50,7 +50,7 @@ export default function CryptoForNewbies() {
             <img
               src="/images/Payment processed 1 1.png"
               alt=""
-              className="CryptoForNewbiesBannerImg"
+              className={s.CryptoForNewbiesBannerImg}
             />
           </Grid>
         </Grid>
@@ -75,7 +75,11 @@ export default function CryptoForNewbies() {
         role="presentation"
       >
         <div role="presentation" className="nextTopic">
-          <Typography align="center" className="fontWeightBold" style={{ display: 'flex', flexDirection: next ? '' : 'row-reverse' }}>
+          <Typography
+            align="center"
+            className="fontWeightBold"
+            style={{ display: 'flex', flexDirection: next ? '' : 'row-reverse' }}
+          >
             {next ? 'Next topic' : 'Previous'}
             <span>
               {next ? '' : '<'}
@@ -83,7 +87,9 @@ export default function CryptoForNewbies() {
             </span>
           </Typography>
         </div>
-        <Typography className="fontWeightBold greenText" noWrap>{cryptoNavigation[nextIndex].label}</Typography>
+        <Typography className="fontWeightBold greenText" noWrap>
+          {cryptoNavigation[nextIndex].label}
+        </Typography>
       </div>
     );
   }
@@ -112,8 +118,20 @@ export default function CryptoForNewbies() {
   return (
     <Layout activeTabIndex={2}>
       <div className="flex">
-        <Tabs value={activeTabIndex} onChange={(e, newValue) => { setActiveTabIndex(newValue); }} className="cryptoSubheader" classes={{ indicator: 'cryptoIndicator' }}>
-          { cryptoNavigation.map((item, index) => <Tab key={item.key} label={item.label} {...a11yProps(index)} classes={{ root: 'cryptoTabRoot', selected: 'cryptoSelectedTab' }} />)}
+        <Tabs
+          value={activeTabIndex}
+          onChange={(e, newValue) => { setActiveTabIndex(newValue); }}
+          className={s.cryptoSubheader}
+          classes={{ indicator: 'cryptoIndicator' }}
+        >
+          {cryptoNavigation.map((item, index) => (
+            <Tab
+              key={item.key}
+              label={item.label}
+              {...a11yProps(index)}
+              classes={{ root: 'cryptoTabRoot', selected: 'cryptoSelectedTab' }}
+            />
+          ))}
         </Tabs>
       </div>
       {displayHeader()}
