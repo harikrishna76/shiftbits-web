@@ -12,6 +12,20 @@
   text-decoration: underline;
 }
 
+.footerItem a {
+  text-decoration: none;
+}
+
+.footerItem a:hover {
+  color: #21bf73 !important;
+  text-decoration: underline;
+}
+
+.footerItem a:visited {
+  text-decoration: none;
+  color: #6b6c6f;
+}
+
 .greyItem {
   color: #6b6c6f;
   padding: 4px 0;

@@ -4,13 +4,13 @@ import Layout from 'components/layout';
 import styles from './About.module.scss';
 
 const TEAM_MEMBERS = [
-  { name: 'Saketha Pingali', role: 'CEO, CO-FOUNDER', imageSrc: './Team/CEO.png' },
-  { name: 'Ram Budime', role: 'CBDO, CO-FOUNDER', imageSrc: './Team/CBDO.png' },
-  { name: 'Jan Dreske', role: 'CTO', imageSrc: './Team/CTO.png' },
-  { name: 'Ales Mercun', role: 'SR. BACKEND DEVELOPER', imageSrc: './Team/backend_developer.png' },
-  { name: 'Hari Krishna Salver', role: 'MOBILE & WEB DEVELOPER', imageSrc: './Team/frontend_developer.png' },
-  { name: 'Priyank Shah', role: 'UI/UX DESIGNER', imageSrc: './Team/designer.png' },
-  { name: 'Apoorva Malladi', role: 'COPYWRITER', imageSrc: './Team/copywriter.png' },
+  { name: 'Saketha Pingali', role: 'CEO, CO-FOUNDER', imageSrc: '/images/Team/CEO.png' },
+  { name: 'Ram Budime', role: 'CBDO, CO-FOUNDER', imageSrc: '/images/Team/CBDO.png' },
+  { name: 'Jan Dreske', role: 'CTO', imageSrc: '/images/Team/CTO.png' },
+  { name: 'Ales Mercun', role: 'SR. BACKEND DEVELOPER', imageSrc: '/images/Team/backend_developer.png' },
+  { name: 'Hari Krishna Salver', role: 'MOBILE & WEB DEVELOPER', imageSrc: '/images/Team/frontend_developer.png' },
+  { name: 'Priyank Shah', role: 'UI/UX DESIGNER', imageSrc: '/images/Team/designer.png' },
+  { name: 'Apoorva Malladi', role: 'COPYWRITER', imageSrc: '/images/Team/copywriter.png' },
 ];
 
 export default function SpacingGrid() {

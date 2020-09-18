@@ -287,6 +287,10 @@ input:disabled {
   color: #6b6c6f;
 }
 
+.greenText {
+  color: #21bf73;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: coinSpin infinite 20s linear;

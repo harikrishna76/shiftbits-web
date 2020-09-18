@@ -70,11 +70,11 @@ export default function CryptoForNewbies() {
   function displayNavigationItem(nextIndex, next = true) {
     return (
       <div
-        className="spaceBetween cryptoFooter"
+        className={`spaceBetween ${s.cryptoFooter}`}
         onClick={() => setActiveTabIndex(nextIndex)}
         role="presentation"
       >
-        <div role="presentation" className="nextTopic">
+        <div role="presentation" className={s.nextTopic}>
           <Typography
             align="center"
             className="fontWeightBold"
@@ -83,6 +83,7 @@ export default function CryptoForNewbies() {
             {next ? 'Next topic' : 'Previous'}
             <span>
               {next ? '' : '<'}
+              &nbsp;&nbsp;&nbsp;
               {next ? '>' : ''}
             </span>
           </Typography>
@@ -122,14 +123,14 @@ export default function CryptoForNewbies() {
           value={activeTabIndex}
           onChange={(e, newValue) => { setActiveTabIndex(newValue); }}
           className={s.cryptoSubheader}
-          classes={{ indicator: 'cryptoIndicator' }}
+          classes={{ indicator: s.cryptoIndicator }}
         >
           {cryptoNavigation.map((item, index) => (
             <Tab
               key={item.key}
               label={item.label}
               {...a11yProps(index)}
-              classes={{ root: 'cryptoTabRoot', selected: 'cryptoSelectedTab' }}
+              classes={{ root: s.cryptoTabRoot, selected: s.cryptoSelectedTab }}
             />
           ))}
         </Tabs>

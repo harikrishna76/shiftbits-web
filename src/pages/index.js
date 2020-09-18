@@ -32,9 +32,7 @@ export default function Home() {
   function fetchCoinLivePrice() {
     let lastFetched = new Date(localStorage.getItem('lastFetched'));
     let exchangeRate = localStorage.getItem('exchangeRate');
-    console.log('localStorage', lastFetched);
     lastFetched = (new Date() - lastFetched) / 1000 / 60;
-    console.log('localStorage', lastFetched);
     if (lastFetched < 10 && exchangeRate) {
       setCryptoPrice({
         bitcoin: { buy: 1 / exchangeRate, sell: exchangeRate },
@@ -45,7 +43,6 @@ export default function Home() {
         .get('https://blockchain.info/ticker')
         .then((response) => {
           if (response && response.data && response.data.INR) {
-            console.log(response.data.INR.buy);
             exchangeRate = response.data.INR.buy;
             localStorage.setItem('lastFetched', new Date());
             localStorage.setItem('exchangeRate', exchangeRate);
@@ -134,12 +131,15 @@ export default function Home() {
         </div>
         <div className={`fontSize20 fontWeightBold ${styles.black60} ${styles.marginT22} textAlignCenter`}>
           1 BTC ~
+          {' '}
           {cryptoPrice[activeCrypto].sell}
           {' '}
           INR
         </div>
         {/* <div className={`${styles.buyButton} center`}>
-          <div className="fontWeightBold fontSize20">{buySellTabIndex===0?"Buy Bitcoin":"Sell Bitcoin"}</div>
+          <div className="fontWeightBold fontSize20">
+            {buySellTabIndex===0?"Buy Bitcoin":"Sell Bitcoin"}
+          </div>
         </div> */}
       </div>
     </div>
