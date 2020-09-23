@@ -166,7 +166,7 @@ export default function Home() {
               <div className="greenColor fontSize24 fontWeightBold">LAUNCHING SOON!</div>
             </div> */}
           </div>
-          <div className={styles.bannerImageContainer} style={{ justifyContent: 'flex-end' }}>
+          <div className={`${styles.bannerImageContainer} ${styles.bannerImageContainerRight}`} style={{ justifyContent: 'flex-end' }}>
             <img src="/images/Asset 4 1.png" alt="" className={styles.homeImage2} />
           </div>
         </div>

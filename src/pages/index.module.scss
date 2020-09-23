@@ -31,7 +31,7 @@
 .bannerImageContainer {
   display: flex;
   width: 33%;
-  height: 60vh;
+  height: 75vh;
   object-fit: cover;
   flex: 1;
 }
@@ -40,6 +40,20 @@
   object-fit: cover;
   width: auto;
   height: 100%;
+}
+
+.bannerImageContainerRight {
+  height: 65vh;
+}
+
+@media (max-width: 1440px) {
+  .bannerImageContainer {
+    height: 65vh;
+  }
+
+  .bannerImageContainerRight {
+    height: 55vh;
+  }
 }
 
 .homeMain {
