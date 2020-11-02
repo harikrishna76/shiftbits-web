@@ -139,6 +139,11 @@ input:disabled {
   justify-content: center;
 }
 
+.alignCenter {
+  display: flex;
+  align-items: center;
+}
+
 .textAlignCenter {
   text-align: center;
 }
@@ -310,6 +315,36 @@ input:disabled {
 
 .App-link {
   color: #61dafb;
+}
+
+.bgLightGreen {
+  background-color: rgba(33, 191, 115, 0.1);
+}
+
+.bgLightRed {
+   background-color: rgba(255, 81, 43, 0.1);
+}
+
+.bgLightPurple {
+  background-color: rgba(109, 117, 182, 0.1);
+}
+
+.padding1 {
+  padding: 1rem;
+}
+
+.padding2 {
+  padding: 2rem;
+}
+
+.paddingH0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.paddingV0 {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 @keyframes coinSpin {

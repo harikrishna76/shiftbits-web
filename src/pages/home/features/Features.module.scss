@@ -1,0 +1,208 @@
+.homeMain {
+  padding: 3rem 0;
+}
+
+.featureContainer {
+  margin-bottom: 16.3rem !important;
+  width: 100%;
+  padding: 0 10rem;
+}
+
+.featureContainer:nth-child(odd) {
+  flex-direction: row-reverse !important;
+}
+
+.featuresButton {
+  width: 19.68rem;
+  height: 3.625rem;
+  border: 2px solid #21bf73;
+  border-radius: 5px;
+  margin-top: 2.5rem;
+}
+
+.featureHeader {
+  padding: 0 0 66px !important;
+}
+
+.featureImage1 {
+  width: 90%;
+  height: 26.6rem;
+}
+
+.featureImage2 {
+  width: 70%;
+  height: auto;
+}
+
+.featureImage3 {
+  width: 80%;
+  height: 34.68rem;
+}
+
+.featureImage4 {
+  width: 70%;
+  height: 29.625rem;
+}
+
+.featureImage5 {
+  width: 70%;
+  height: 29.75rem;
+}
+
+.featureImage6 {
+  width: auto;
+  height: 45rem;
+}
+
+.marginV32 {
+  margin: 32px 0 !important;
+  align-items: center;
+}
+
+.iconBox {
+  width: 5.375rem;
+  height: 5.375rem;
+  border-radius: 1.56rem;
+  margin-right: 2.5rem;
+  flex-shrink: 0;
+}
+
+.storesLinksContainer img {
+ height: 60px;     
+}
+
+@media (max-width: 640px) {
+  .homeMain {
+    flex-direction: column-reverse !important;
+  }
+
+  .featureHeaderContainer {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .headerStrip {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background: #21bf73;
+  }
+
+  .featureHeader {
+    font-size: 22px !important;
+    font-weight: bold !important;
+    background-color:red;
+    padding: 0 2rem !important;
+    display: inline-block;
+    background: white;
+    z-index: 1;
+  }
+
+  .homeMain {
+    padding: 0;
+  }
+
+  .featureContainer {
+    padding: 0 2rem;
+    margin-bottom: 2.625rem !important;
+  }
+
+  .featureContainer:nth-child(odd) {
+    flex-direction: row !important;
+    background-color: rgba(243, 244, 244, 0.5);
+    padding-bottom: 2rem;
+  }
+
+  .featureContainer:last-child {
+    margin-bottom: 2rem !important;
+  }
+
+  .featureImgContainer {
+    display: flex;
+    justify-content: center;
+    padding: 1.75rem 0;
+  }
+
+  .featureImage1, .featureImage2, .featureImage3, .featureImage4, .featureImage5 {
+    width: 70%;
+    height: auto;
+  }
+
+  .featureImage2 {
+    width: 100%;
+  }
+
+  .featureImage6 {
+    width: 100%;
+    height: auto;
+  }
+
+  .featuresBtnContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .featuresButton {
+    width: 221px;
+    height: 48px;
+    border: 2px solid #21bf73;
+    border-radius: 10px;
+    margin-top: 2.5rem;
+  }
+
+  .heading {
+    font-size: 18px !important;
+  }
+
+  .subHeading {
+    font-size: 14px !important;
+    margin-top: 0.75rem !important;
+  }
+
+  .buyAndSellOnGo {
+    background: white !important;
+
+    .headerSection {
+      flex-direction: column;
+      margin-top: 3.5rem;
+    }
+
+    .buyAndSellHeader {
+      font-size: 24px !important;
+      font-weight: normal !important;
+    }
+
+    .featuresSection {
+      align-items: center !important;
+      display: flex;
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+
+    .featureBox {
+      flex-direction: column;
+      justify-content: center;
+      width: 275px;
+    }
+
+    .iconBox {
+      margin-right: 0;
+      height: 3.5rem;
+      width: 3.5rem;
+      border-radius: 16.3px;
+    }
+
+    .heading {
+      font-size: 16px;
+      text-align: center;
+      margin-top: 1.125rem;
+    }
+
+    .storesLinksContainer img{
+      height: 35.5px;
+    }
+  }
+}
+

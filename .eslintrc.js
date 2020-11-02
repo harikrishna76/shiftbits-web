@@ -12,6 +12,8 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'plugin:react-hooks/recommended',
     'airbnb',
+    'prettier',
+    'prettier/react',
   ],
   env: {
     browser: true,
@@ -37,11 +39,12 @@ module.exports = {
       ],
     },
   },
-  plugins: [],
+  plugins: ['prettier'],
   rules: {
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': [0],
     'react/jsx-props-no-spreading': 'off',
+    'prettier/prettier': 'error',
   },
 };

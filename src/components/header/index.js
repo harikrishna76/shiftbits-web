@@ -1,25 +1,47 @@
 import React, { useState } from 'react';
 import {
-  AppBar, Toolbar, Tabs, Tab,
+  AppBar,
+  Toolbar,
+  Tabs,
+  Tab,
+  IconButton,
+  Hidden,
+  SwipeableDrawer,
 } from '@material-ui/core';
+import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import styles from './Header.module.scss';
+import s from './Header.module.scss';
 
 const NavigationItems = [
   { key: 'home', label: 'Home', path: '/' },
   { key: 'about', label: 'About', path: '/about' },
   // {key:'howItWorks', label: 'How it works', path: '/how-it-works'},
-  { key: 'cryptoForNewbies', label: 'Crypto for newbies', path: '/crypto-for-newbies' },
+  {
+    key: 'cryptoForNewbies',
+    label: 'Crypto for newbies',
+    path: '/crypto-for-newbies',
+    hideOnMobile: true,
+  },
   // {key:'wallets', label: 'Wallets', path: '/wallets'},
 ];
 
 export default function Header(props) {
   const router = useRouter();
 
+  const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
+
   const { activeTabIndex: activeTabIndexProp } = props;
 
   const [activeTabIndex, setActiveTabIndex] = useState(activeTabIndexProp);
+
+  const [drawerState, setDrawerState] = React.useState(false);
+
+  function handleDrawerToggle() {
+    setDrawerState(!drawerState);
+  }
 
   function a11yProps(index) {
     return {
@@ -28,46 +50,111 @@ export default function Header(props) {
     };
   }
 
-  return (
-    <div className={styles.headerRoot}>
-      <AppBar position="static" color="inherit" className={styles.appbar}>
-        <Toolbar className={styles.toolbar}>
-          <div className="flex1">
-            <Link href="/">
-              <img
-                className={styles.logo}
-                src="/images/logo.png"
-                alt=""
-                width="208"
-                height="auto"
-              />
-            </Link>
-          </div>
-          <div className="flex flex1" style={{ justifyContent: 'center' }}>
-            <img src="/images/Group 852.png" alt="" className={styles.launchingSoonImage} />
-          </div>
+  const logo = (
+    <Link href="/">
+      <img className={s.logo} src="/images/logo.png" alt="" />
+    </Link>
+  );
+
+  const displaySwipeableDrawer = () => (
+    <SwipeableDrawer
+      anchor="right"
+      open={drawerState}
+      onOpen={handleDrawerToggle}
+      onClose={handleDrawerToggle}
+      disableBackdropTransition={!iOS}
+      disableDiscovery={iOS}
+      classes={{
+        paper: s.drawerPaper,
+      }}
+    >
+      <div>
+        <div className={`flex1 alignCenter ${s.header}`}>
+          {logo}
           <div className="flex flex1" style={{ justifyContent: 'flex-end' }}>
-            <Tabs
-              value={activeTabIndex}
-              onChange={(e, newValue) => {
-                setActiveTabIndex(newValue);
-                const nextItem = NavigationItems[newValue];
-                router.push(nextItem.path);
-              }}
-              classes={{
-                indicator: styles.indicator,
-                flexContainer: styles.tabsFlexContainer,
-              }}
+            <IconButton
+              color="inherit"
+              aria-label="Open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
             >
-              {NavigationItems.map((item, index) => (
-                <Tab
-                  key={item.key}
-                  label={item.label}
-                  classes={{ root: styles.tabRoot, selected: styles.selectedTab }}
-                  {...a11yProps(index)}
-                />
-              ))}
-            </Tabs>
+              <CloseIcon />
+            </IconButton>
+          </div>
+        </div>
+        <div className={s.linksContainer}>
+          {NavigationItems.map(
+            (item) =>
+              !item.hideOnMobile && (
+                <Link href={item.path} key={item.key}>
+                  <div
+                    className={`${s.linkText} spaceBetween`}
+                    role="presentation"
+                    onClick={handleDrawerToggle}
+                  >
+                    {item.label}
+                    <ArrowForwardIcon />
+                  </div>
+                </Link>
+              ),
+          )}
+        </div>
+      </div>
+    </SwipeableDrawer>
+  );
+
+  return (
+    <div className={s.headerRoot}>
+      <AppBar position="static" color="inherit" className={s.appbar}>
+        <Toolbar className={s.toolbar}>
+          <div className="flex1 alignCenter">{logo}</div>
+          <Hidden smDown>
+            <div className="flex flex1" style={{ justifyContent: 'center' }}>
+              <img
+                src="/images/Group 852.png"
+                alt=""
+                className={s.launchingSoonImage}
+              />
+            </div>
+          </Hidden>
+          <div className="flex flex1" style={{ justifyContent: 'flex-end' }}>
+            <Hidden smUp>
+              <IconButton
+                color="inherit"
+                aria-label="Open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+              >
+                <MenuIcon />
+              </IconButton>
+              {displaySwipeableDrawer()}
+            </Hidden>
+            <Hidden smDown>
+              <Tabs
+                value={activeTabIndex}
+                onChange={(e, newValue) => {
+                  setActiveTabIndex(newValue);
+                  const nextItem = NavigationItems[newValue];
+                  router.push(nextItem.path);
+                }}
+                classes={{
+                  indicator: s.indicator,
+                  flexContainer: s.tabsFlexContainer,
+                }}
+              >
+                {NavigationItems.map((item, index) => (
+                  <Tab
+                    key={item.key}
+                    label={item.label}
+                    classes={{
+                      root: s.tabRoot,
+                      selected: s.selectedTab,
+                    }}
+                    {...a11yProps(index)}
+                  />
+                ))}
+              </Tabs>
+            </Hidden>
           </div>
         </Toolbar>
       </AppBar>
