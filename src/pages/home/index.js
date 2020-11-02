@@ -9,6 +9,7 @@ const NavigationItems = [
   { key: 'buy', label: 'Buy' },
   { key: 'sell', label: 'Sell' },
 ];
+// mobile comment
 
 export default function Home() {
   const [buySellTabIndex, setBuySellTabIndex] = useState(0);
