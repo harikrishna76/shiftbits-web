@@ -131,7 +131,8 @@
 
   .featureImage1, .featureImage2, .featureImage3, .featureImage4, .featureImage5 {
     width: 70%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
   }
 
   .featureImage2 {
@@ -224,18 +225,16 @@
 @media only screen and (max-width: 320px) {
   .featureImage1, .featureImage2, .featureImage3, .featureImage4, .featureImage5 {
     width: 90%;
-    height: auto;
   }
 
   .storesLinksContainer {
     display: flex;
-    justify-content: space-between !important;
+    justify-content: space-around !important;
     width: 100%;
   }
 
   .storesLinksContainer img{
-    height: auto !important;
-    width: 46% !important;
+    height: 30px !important;
   }
 
   .storesLinksContainer img:last-child {
@@ -251,7 +250,6 @@
 @media only screen and (min-width: 321px) and (max-width: 360px) {
   .featureImage1, .featureImage2, .featureImage3, .featureImage4, .featureImage5 {
     width: 80%;
-    height: auto;
   }
 }
 
