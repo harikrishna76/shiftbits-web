@@ -119,11 +119,7 @@ export default function Featuers() {
         </Hidden>
         <div className={`flex ${s.storesLinksContainer}`}>
           <img src="/images/google-play-badge 2.png" alt="" />
-          <img
-            src="/images/app-store-badge 2.png"
-            alt=""
-            style={{ marginLeft: '2rem' }}
-          />
+          <img src="/images/app-store-badge 2.png" alt="" />
         </div>
       </Grid>
     </Grid>

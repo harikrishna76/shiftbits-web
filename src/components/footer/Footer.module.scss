@@ -45,7 +45,7 @@
   text-decoration: none;
 }
 
-@media (max-width: 640px) {
+@media only screen and (max-width: 640px) {
   .footerItem {
     display: flex;
     justify-content: center;

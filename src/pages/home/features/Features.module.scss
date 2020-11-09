@@ -71,7 +71,11 @@
  height: 60px;     
 }
 
-@media (max-width: 640px) {
+.storesLinksContainer img:last-child {
+  margin-left: 2rem;
+}
+
+@media only screen and (max-width: 640px) {
   .homeMain {
     flex-direction: column-reverse !important;
   }
@@ -184,7 +188,7 @@
     .featureBox {
       flex-direction: column;
       justify-content: center;
-      width: 275px;
+      max-width: 275px;
     }
 
     .iconBox {
@@ -200,9 +204,54 @@
       margin-top: 1.125rem;
     }
 
+    .storesLinksContainer {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
     .storesLinksContainer img{
       height: 35.5px;
+      width: auto;
     }
+
+    .storesLinksContainer img:last-child {
+      margin-left: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .featureImage1, .featureImage2, .featureImage3, .featureImage4, .featureImage5 {
+    width: 90%;
+    height: auto;
+  }
+
+  .storesLinksContainer {
+    display: flex;
+    justify-content: space-between !important;
+    width: 100%;
+  }
+
+  .storesLinksContainer img{
+    height: auto !important;
+    width: 46% !important;
+  }
+
+  .storesLinksContainer img:last-child {
+    margin-left: 0 !important;
+  }
+
+  .featuresButton {
+    max-width: 210px;
+    transform: scale(0.8);
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 360px) {
+  .featureImage1, .featureImage2, .featureImage3, .featureImage4, .featureImage5 {
+    width: 80%;
+    height: auto;
   }
 }
 
