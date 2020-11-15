@@ -14,6 +14,8 @@
 
 .logo {
   cursor: pointer;
+  height: auto;
+  width: 208px;
 }
 
 .indicator {
@@ -40,5 +42,39 @@
 .launchingSoonImage {
   height: 70px;
   width: auto;
+}
+
+.drawerPaper {
+  width: calc(100% - 2rem);
+  padding: 0rem 1rem;
+
+  .header {
+    height: 60px;
+  }
+}
+
+.linksContainer {
+  margin-top: 20px;
+  padding: 0 1rem;
+
+  .linkText {
+    height: 29px;
+    font-family: HelveticaLTStd;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    color: #191a1f;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .toolbar {
+    height: 60px;
+  }
+
+  .logo {
+    width: 170px;
+  }
 }
 

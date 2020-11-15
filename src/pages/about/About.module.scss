@@ -88,3 +88,85 @@
   height: 28px;
   margin: 12px;
 }
+
+.chatBoxImg {
+  width: 70%;
+}
+
+.textSection2 {
+  padding-right: 4rem;
+  flex-direction: column;
+  display: flex;
+}
+
+.textSection3 {
+  margin-top: 2rem;
+}
+
+.textSection4, .teamSection {
+  margin-top: 4rem;
+}
+
+@media only screen and (max-width: 640px) {
+  .teamMemberCard {
+    width: 100%;
+  }
+
+  .chatBoxImg {
+    width: 100%;
+  }
+
+  .aboutUsText1, .aboutUsText2 {
+    font-size: 14px !important;
+    text-align: left;
+    margin-bottom: 1rem !important;
+  }
+
+  .aboutUsText3 {
+    font-size: 22px !important;
+    text-align: left;
+    margin-bottom: 2rem !important;
+  }
+
+  .textSection2 {
+    padding-right: 0;
+  }
+
+  .textSection3 {
+    margin-top: 1rem;
+  }
+
+  .textSection3 .aboutUsText3 {
+    margin-bottom: 1rem !important;
+  }
+
+  .textSection4 {
+    margin-top: 1rem;
+  }
+
+  .teamSection {
+    margin-top: 2rem;
+  }
+
+  .aboutUsText5 {
+    font-size: 24px !important;
+  }
+
+  .teamMemberImage {
+    width: 114.8px;
+    height: 114.8px;
+  }
+
+  .memberName {
+    font-size: 14px;
+  }
+
+  .memberRole {
+    font-size: 13px;
+  }
+
+  .teamMembersContainer {
+    margin-bottom: 1rem;
+  }
+}
+

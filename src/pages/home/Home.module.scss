@@ -7,6 +7,12 @@
   flex-direction: column !important;
 }
 
+.launchingSoonImage {
+  height: 62px;
+  width: auto;
+  margin: 1.5rem 0 0.5rem;
+}
+
 .heading1 {
   padding: 2rem 0 1rem;
   line-height: 1.2;
@@ -46,20 +52,6 @@
   height: 65vh;
 }
 
-@media (max-width: 1440px) {
-  .bannerImageContainer {
-    height: 65vh;
-  }
-
-  .bannerImageContainerRight {
-    height: 55vh;
-  }
-}
-
-.homeMain {
-  padding: 3rem 0;
-}
-
 .homeImage1 {
   text-align: left;
   object-fit: cover;
@@ -71,53 +63,6 @@
   text-align: right;
   float: right;
   margin-top: -10vh;
-}
-
-.featuresButton {
-  width: 19.68rem;
-  height: 3.625rem;
-  border: 2px solid #21bf73;
-  border-radius: 5px;
-  margin-top: 2.5rem;
-}
-
-.featureImage1 {
-  width: 42.56rem;
-  height: 26.6rem;
-}
-
-.featureImage2 {
-  width: 46.875rem;
-  height: 30rem;
-}
-
-.featureImage3 {
-  width: 38.81rem;
-  height: 34.68rem;
-}
-
-.featureImage4 {
-  width: 32.3rem;
-  height: 29.625rem;
-}
-
-.featureImage5 {
-  width: 33.68rem;
-  height: 29.75rem;
-}
-
-.featureImage6 {
-  width: auto;
-  height: 45rem;
-}
-
-.featureContainer {
-  margin-bottom: 16.3rem;
-  width: 100%;
-}
-
-.marginBottomHeading {
-  padding: 0 0 66px !important;
 }
 
 .iconBox {
@@ -221,4 +166,28 @@
 
 .inputField:focus {
   outline: none;
+}
+
+@media (max-width: 1440px) {
+  .bannerImageContainer {
+    height: 65vh;
+  }
+
+  .bannerImageContainerRight {
+    height: 55vh;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .homeBannerSection {
+    height: auto;
+  }
+
+  .homeHeading1, .homeHeading2 {
+    font-size: 24px;
+  }
+
+  .homeHeading3 {
+    font-size: 14px;
+  }
 }

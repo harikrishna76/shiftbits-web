@@ -14,7 +14,7 @@ function MyApp(props) {
     <div style={{ display: showUI ? 'block' : 'none' }}>
       <Head>
         <title>ShiftBits - Coming Soon</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Component {...pageProps} />
     </div>
