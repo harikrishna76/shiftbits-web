@@ -8,7 +8,7 @@ const navigationItems = [
   { key: 'spends', label: 'Spends', path: '/spends' },
   { key: 'transaction', label: 'Transaction', path: '/transaction' },
   { key: 'account', label: 'Account', path: '/account' },
-  { key: 'faq', label: "FAQ's", path: '/account' },
+  { key: 'faq', label: "FAQ's", path: '/faq' },
 ];
 
 export default function ProductLayout(props) {
