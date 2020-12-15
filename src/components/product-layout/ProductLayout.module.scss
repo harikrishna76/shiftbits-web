@@ -5,10 +5,23 @@
 }
 
 .navigation {
-    width: 263px;
+    min-width: 200px;
     border: solid 0.5px #d1d1d2;
 }
 
 .container {
     display: flex;
+    flex-grow: 1;
+}
+
+@media (min-width: 1366px) {
+    .navigation {
+        min-width: 250px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .navigation {
+        min-width: 300px;
+    }
 }
