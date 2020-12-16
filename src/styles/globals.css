@@ -157,6 +157,10 @@ input:disabled {
   color: #21bf73;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .text {
   word-wrap: break-word;
   overflow: hidden;

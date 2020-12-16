@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { Grid, Typography, Hidden } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import ProductLayout from 'components/product-layout';
-import { AllGiftCards, FeaturedCards } from './constants';
+import GiftCardModal from './gift-card-modal';
+import { AllGiftCards } from './constants';
 import s from './Spends.module.scss';
 
 export default function Spends() {
   const [searchValue, setSearchValue] = useState('');
+  const [showGiftCardModal, setShowGiftCardModal] = useState(false);
+  const [activeCard, setActiveCard] = useState({});
 
   const renderHeader = () => {
     return (
@@ -40,7 +43,14 @@ export default function Spends() {
       <div>
         <div className="flexWrap spaceBetween">
           {cards.map((giftCard) => (
-            <div className={`${s.card} center`}>
+            <div
+              className={`${s.card} center`}
+              onClick={() => {
+                setShowGiftCardModal(true);
+                setActiveCard(giftCard);
+              }}
+              role="presentation"
+            >
               <img src={giftCard.logo} alt="" />
             </div>
           ))}
@@ -56,6 +66,13 @@ export default function Spends() {
           {renderHeader()}
           {displayAllGiftCards()}
         </Grid>
+        <GiftCardModal
+          open={showGiftCardModal}
+          card={activeCard}
+          onClose={() => {
+            setShowGiftCardModal(false);
+          }}
+        />
       </Grid>
     </ProductLayout>
   );

@@ -1,0 +1,31 @@
+.modalBody { 
+    width: 450px;
+}
+
+.modalContent {
+    padding-top: 1rem;
+
+    .logo {
+        border-radius: 5px;
+        border: solid 0.5px #d1d1d2;
+        padding: 0.75rem 1rem;
+    }
+}
+
+.actionBtn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e9f9f1;
+    user-select: none;
+}
+
+.nCards {
+    margin: 0 2rem;
+    font-family: HelveticaLTStd;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #191a1f;
+    user-select: none;
+    min-width: 2rem;
+}
