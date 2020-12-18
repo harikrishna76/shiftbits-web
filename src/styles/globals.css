@@ -356,6 +356,24 @@ input:disabled {
   padding-bottom: 0;
 }
 
+.MuiOutlinedInput-notchedOutline {
+  border-color: #d1d1d2 !important;
+}
+
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color:rgb(186, 186, 188) !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused 
+.MuiOutlinedInput-notchedOutline {
+  border-color: rgb(144, 223, 185) !important;
+}
+
+.visibilityHidden {
+  visibility: hidden;
+}
+
 @keyframes coinSpin {
   50% {
     transform: rotateY(180deg);

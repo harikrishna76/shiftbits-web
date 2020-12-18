@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Grid } from '@material-ui/core';
 import Modal from 'components/modal';
+import FormField from 'components/form-fields';
+import Button from 'components/button';
+import spendsFields from 'constants/spendsGiftCardFields';
 import s from './GiftCardModal.module.scss';
 
 export default function GiftCardModal(props) {
@@ -47,6 +51,20 @@ export default function GiftCardModal(props) {
                 <img src="/images/mdi_add.png" alt="+" />
               </div>
             </div>
+          </div>
+          <div>
+            <Grid>
+              {spendsFields.fields.map((field) => (
+                <FormField fieldDetails={field} />
+              ))}
+            </Grid>
+          </div>
+          <div>
+            <Button
+              title="Proceed"
+              variant="primary"
+              containerClassName={s.proceedBtn}
+            />
           </div>
         </div>
       </Modal>

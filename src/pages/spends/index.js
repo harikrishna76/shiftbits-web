@@ -54,6 +54,11 @@ export default function Spends() {
               <img src={giftCard.logo} alt="" />
             </div>
           ))}
+          {/* avoid problems with spacebetween 
+              when number of cards are less than max can fix in row */}
+          <div className={`${s.card} visibilityHidden`} />
+          <div className={`${s.card} visibilityHidden`} />
+          <div className={`${s.card} visibilityHidden`} />
         </div>
       </div>
     );
