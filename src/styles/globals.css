@@ -118,7 +118,13 @@ input:disabled {
 
 .spaceBetween {
   display: flex;
-  justify-content: space-between;;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spaceAround {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
