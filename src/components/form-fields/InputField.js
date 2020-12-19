@@ -21,7 +21,9 @@ export default function TextFieldElement(props) {
   });
 
   const setInputLabelProps = () => {
-    const inputLabelProps = {};
+    const inputLabelProps = {
+      required: false,
+    };
     if (['file', 'date'].includes(fieldDetails.type)) {
       inputLabelProps.shrink = true;
     }
@@ -42,6 +44,7 @@ export default function TextFieldElement(props) {
       InputLabelProps={setInputLabelProps()}
       autoComplete={fieldDetails.autoComplete}
       disabled={disabled}
+      variant="outlined"
       {...stateHandler}
     />
   );

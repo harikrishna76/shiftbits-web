@@ -1,0 +1,102 @@
+.root {
+    width: 500px;
+}
+
+.formField {
+    padding: 0 !important;
+    margin-left: -10px !important;
+}
+
+.signInLink {
+    font-family: HelveticaLTStd-Roman;
+    font-size: 1.125rem;
+    color: #191a1f;
+
+    span {
+        color: #21bf73;
+        margin-left: 4px;
+    }
+}
+
+.textType1 {
+    font-family: HelveticaLTStd-Roman;
+    font-size: 1rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #191a1f;
+
+    span {
+        color: #21bf73;
+    }
+}
+
+.textType2 {
+    color: #6b6c6f
+}
+
+.createAccount {
+    .acceptField {
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .promotionField {
+        margin-bottom: 2.5rem;
+    }
+
+    .promotionsText {
+        width: 85%;
+        color: #6b6c6f
+    }
+}
+
+.verification {
+    padding-top: 4px;
+
+    .verificationCode {
+        min-height: 7rem;
+    }
+
+    .resendLink {
+        margin-top: 4rem;
+    }
+
+    .useAnotherNumber {
+        margin: 0.75rem 0 1.5rem;
+    }
+}
+
+.personalDetails .proceedBtn {
+    margin-top: 4rem;
+}
+
+.identityVerification {
+
+    .option {
+        width: 90px;
+        height: 66px;
+        margin: 24px 0;
+        padding: 1rem 1rem;
+        border-radius: 5px;
+        border: solid 0.5px #d1d1d2;
+
+        img {
+            width: 40%;
+        }
+    }
+
+    .option .textType1 {
+        color: #6b6c6f;
+    }
+
+    .activeOption .textType1 {
+        color: #191a1f;
+    }
+
+    .activeOption {
+        border-color: #191a1f;
+    }
+}

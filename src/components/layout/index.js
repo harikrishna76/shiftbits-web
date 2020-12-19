@@ -4,12 +4,12 @@ import Header from 'components/header';
 import Footer from 'components/footer';
 
 export default function Layout(props) {
-  const { children, activeTabIndex } = props;
+  const { children, activeTabIndex, hideSignIn } = props;
 
   return (
     <div>
       <Typography>
-        <Header activeTabIndex={activeTabIndex} />
+        <Header activeTabIndex={activeTabIndex} hideSignIn={hideSignIn} />
         {children}
         <Footer />
       </Typography>

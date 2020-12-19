@@ -7,7 +7,7 @@ export default function ProductLayout(props) {
   const { children, activeNavigation } = props;
 
   return (
-    <Layout>
+    <Layout hideSignIn>
       <div className={s.root}>
         <div className={s.navigation}>
           <Navigation activeNavigation={activeNavigation} />

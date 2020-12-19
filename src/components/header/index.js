@@ -13,6 +13,8 @@ import CloseIcon from '@material-ui/icons/Close';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Button from 'components/button';
+import SignInModal from './sign-in';
 import s from './Header.module.scss';
 
 const NavigationItems = [
@@ -33,9 +35,11 @@ export default function Header(props) {
 
   const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-  const { activeTabIndex: activeTabIndexProp } = props;
+  const { activeTabIndex: activeTabIndexProp, hideSignIn = false } = props;
 
   const [activeTabIndex, setActiveTabIndex] = useState(activeTabIndexProp);
+
+  const [showSignInModal, setShowSignInModal] = useState(false);
 
   const [drawerState, setDrawerState] = React.useState(false);
 
@@ -108,8 +112,8 @@ export default function Header(props) {
       <AppBar position="static" color="inherit" className={s.appbar}>
         <Toolbar className={s.toolbar}>
           <div className="flex1 alignCenter">{logo}</div>
-          <Hidden smDown>
-            <div className="flex flex1" style={{ justifyContent: 'center' }}>
+          <Hidden xsUp>
+            <div className="flex" style={{ justifyContent: 'center' }}>
               <img
                 src="/images/Group 852.png"
                 alt=""
@@ -130,34 +134,50 @@ export default function Header(props) {
               {displaySwipeableDrawer()}
             </Hidden>
             <Hidden smDown>
-              <Tabs
-                value={activeTabIndex}
-                onChange={(e, newValue) => {
-                  setActiveTabIndex(newValue);
-                  const nextItem = NavigationItems[newValue];
-                  router.push(nextItem.path);
-                }}
-                classes={{
-                  indicator: s.indicator,
-                  flexContainer: s.tabsFlexContainer,
-                }}
-              >
-                {NavigationItems.map((item, index) => (
-                  <Tab
-                    key={item.key}
-                    label={item.label}
-                    classes={{
-                      root: s.tabRoot,
-                      selected: s.selectedTab,
-                    }}
-                    {...a11yProps(index)}
+              <div>
+                <Tabs
+                  value={activeTabIndex}
+                  onChange={(e, newValue) => {
+                    setActiveTabIndex(newValue);
+                    const nextItem = NavigationItems[newValue];
+                    router.push(nextItem.path);
+                  }}
+                  classes={{
+                    indicator: s.indicator,
+                    flexContainer: s.tabsFlexContainer,
+                  }}
+                >
+                  {NavigationItems.map((item, index) => (
+                    <Tab
+                      key={item.key}
+                      label={item.label}
+                      classes={{
+                        root: s.tabRoot,
+                        selected: s.selectedTab,
+                      }}
+                      {...a11yProps(index)}
+                    />
+                  ))}
+                </Tabs>
+              </div>
+              {!hideSignIn && (
+                <div className="center">
+                  <Button
+                    variant="primary"
+                    title="Sign In"
+                    className={s.signInBtn}
+                    onClick={() => setShowSignInModal(true)}
                   />
-                ))}
-              </Tabs>
+                </div>
+              )}
             </Hidden>
           </div>
         </Toolbar>
       </AppBar>
+      <SignInModal
+        open={showSignInModal}
+        onClose={() => setShowSignInModal(false)}
+      />
     </div>
   );
 }

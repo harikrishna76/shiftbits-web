@@ -9,7 +9,7 @@ import s from './Transaction.module.scss';
 export default function Transaction() {
   const [activeTransaction, setActiveTransaction] = useState({});
 
-  const totalTransactions = !transactions
+  const totalTransactions = transactions
     ? (transactions.pending || []).length +
       (transactions.completed || []).length
     : 0;

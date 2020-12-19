@@ -21,9 +21,12 @@ export default function formFieldStateHandler(props) {
     error: !!error,
     helperText: error,
     onChange: (event) => {
-      let newValue = event && event.target ? event.target.value : '';
+      let newValue = event?.target?.value || '';
       if (type === 'date') {
         newValue = event;
+      }
+      if (type === 'checkbox') {
+        newValue = event?.target?.checked;
       }
       setValue(newValue);
       if (props.error && isValue(newValue)) {

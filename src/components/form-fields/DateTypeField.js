@@ -33,6 +33,7 @@ export default function DateTypeField(props) {
           onChange={stateHandler.onChange}
           format="MM/dd/yyyy"
           KeyboardButtonProps={{ 'aria-label': 'change date' }}
+          inputVariant="outlined"
         />
       </MuiPickersUtilsProvider>
     </div>

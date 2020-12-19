@@ -374,6 +374,10 @@ input:disabled {
   border-color: rgb(144, 223, 185) !important;
 }
 
+.MuiFormLabel-root.Mui-focused {
+  color: #21bf73 !important;
+}
+
 .visibilityHidden {
   visibility: hidden;
 }
