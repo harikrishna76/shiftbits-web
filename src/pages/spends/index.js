@@ -55,7 +55,7 @@ export default function Spends() {
             </div>
           ))}
           {/* avoid problems with spacebetween 
-              when number of cards are less than max can fix in row */}
+              when number of cards are less than max can fit in row */}
           <div className={`${s.card} visibilityHidden`} />
           <div className={`${s.card} visibilityHidden`} />
           <div className={`${s.card} visibilityHidden`} />
@@ -66,7 +66,7 @@ export default function Spends() {
 
   return (
     <ProductLayout activeNavigation="spends">
-      <Grid container style={{ padding: '2rem 2rem 1rem' }}>
+      <Grid container className="pagePadding">
         <Grid item xs={12} md={11}>
           {renderHeader()}
           {displayAllGiftCards()}

@@ -102,7 +102,12 @@ input:disabled {
   flex: 1;
 }
 
+.flexGrow1 {
+  flex-grow: 1
+}
+
 .flexColumn {
+  display: flex;
   flex-direction: column;
 }
 
@@ -360,7 +365,6 @@ input:disabled {
   border-color: #d1d1d2 !important;
 }
 
-
 .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
   border-color:rgb(186, 186, 188) !important;
 }
@@ -372,6 +376,21 @@ input:disabled {
 
 .visibilityHidden {
   visibility: hidden;
+}
+
+.pagePadding {
+  padding: 1rem 2rem;
+}
+
+.pageTitle {
+  font-family: HelveticaLTStd;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #191a1f;
 }
 
 @keyframes coinSpin {
