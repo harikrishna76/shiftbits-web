@@ -90,3 +90,17 @@
     color: #191a1f;
   }
 }
+
+.noTransactionImg {
+  width: 400px;
+}
+
+.noTransactions {
+  color:#6b6c6f;
+}
+
+@media (max-width: 1366px) {
+  .noTransactionImg {
+    width: 350px;
+  }
+}
