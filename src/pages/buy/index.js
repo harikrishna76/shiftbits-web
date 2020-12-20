@@ -47,6 +47,7 @@ export default function Buy() {
                 onClick={() => {
                   setActiveGraphPoint(item);
                 }}
+                role="presentation"
               >
                 <div
                   className={s.fontSize14}
