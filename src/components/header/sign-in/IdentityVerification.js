@@ -23,8 +23,8 @@ const verificationOptions = [
   },
 ];
 
-export default function IdentityVerification(props) {
-  const { setActiveStep } = props;
+export default function IdentityVerification() {
+  // const { setActiveStep } = props;
 
   const [activeOption, setActiveOption] = useState('passport');
 
