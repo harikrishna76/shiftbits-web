@@ -5,7 +5,7 @@ import s from '../Transaction.module.scss';
 export default function TransactionDetails(props) {
   const { details } = props;
 
-  if (!details.transactionId) {
+  if (!details?.transactionId) {
     return null;
   }
 

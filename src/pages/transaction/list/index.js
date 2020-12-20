@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { Grid } from '@material-ui/core';
-import ProductLayout from 'components/product-layout';
-import { transactions } from 'constants/transactions';
 import s from '../Transaction.module.scss';
 
 export default function Transaction(props) {
   const { list, type, setActiveTransaction, activeItem } = props;
 
-  if (!list.length) {
+  if (!list?.length) {
     return null;
   }
 
