@@ -349,6 +349,10 @@ input:disabled {
   background-color: rgba(109, 117, 182, 0.1);
 }
 
+.red {
+  background: red;
+}
+
 .padding1 {
   padding: 1rem;
 }
@@ -401,6 +405,14 @@ input:disabled {
   line-height: 1.5;
   letter-spacing: normal;
   color: #191a1f;
+}
+
+.fieldLabel {
+  font-family: HelveticaLTStd-Fractions;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #191a1f;
+  margin-bottom: 0.5rem;
 }
 
 @keyframes coinSpin {

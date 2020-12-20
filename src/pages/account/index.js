@@ -1,16 +1,27 @@
-import React from 'react';
-import { Grid, Typography, Hidden } from '@material-ui/core';
+import React, { useState } from 'react';
+import { Grid } from '@material-ui/core';
 import ProductLayout from 'components/product-layout';
+import AccountDetails from './AccountDetails';
+import KYCVerification from './KYCVerification';
+import BankDetails from './BankDetails';
 import s from './MyAccount.module.scss';
 
 export default function SpacingGrid() {
   return (
     <ProductLayout activeNavigation="account">
-      <Grid container alignItems="center" style={{ padding: '2rem 2rem 1rem' }}>
-        <Grid item xs={12} md={6}>
-          <div style={{ textAlign: 'center' }}>my account</div>
+      <div className="flexColumn flex1">
+        <Grid container className="flexGrow1">
+          <AccountDetails />
+          <KYCVerification />
+          <BankDetails />
         </Grid>
-      </Grid>
+        <div className="center" style={{ height: '100px' }}>
+          <div className={s.statusIndicator}>
+            <div className={s.statusLine} />
+            <div className={s.activeLine} style={{ width: '50%' }} />
+          </div>
+        </div>
+      </div>
     </ProductLayout>
   );
 }

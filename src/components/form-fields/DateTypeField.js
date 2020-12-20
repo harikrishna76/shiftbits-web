@@ -21,9 +21,12 @@ export default function DateTypeField(props) {
   return (
     <div>
       <MuiPickersUtilsProvider utils={DateFnsUtils}>
+        {fieldDetails.separateLabel && (
+          <div className="fieldLabel">{fieldDetails.label}</div>
+        )}
         <KeyboardDatePicker
           name={fieldDetails.key}
-          label={fieldDetails.label}
+          label={!fieldDetails.separateLabel && fieldDetails.label}
           id={fieldDetails.key}
           fullWidth={fieldDetails.fullWidth || true}
           disablePast={fieldDetails.disablePast}
@@ -31,9 +34,10 @@ export default function DateTypeField(props) {
           {...stateHandler}
           value={stateHandler.value || null}
           onChange={stateHandler.onChange}
-          format="MM/dd/yyyy"
+          format={fieldDetails.format || 'MM/dd/yyyy'}
           KeyboardButtonProps={{ 'aria-label': 'change date' }}
           inputVariant="outlined"
+          InputProps={{ readOnly: true }}
         />
       </MuiPickersUtilsProvider>
     </div>

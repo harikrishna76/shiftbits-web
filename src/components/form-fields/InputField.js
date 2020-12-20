@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import formFieldStateHandler from './formFieldStateHandler';
+import FileButtonOnly from './FileButtonOnly';
 
 export default function TextFieldElement(props) {
   const {
@@ -32,21 +33,38 @@ export default function TextFieldElement(props) {
 
   const fieldKey = formKey + fieldDetails.key;
 
+  if (fieldDetails.type === 'file' && fieldDetails.buttonOnly) {
+    return (
+      <FileButtonOnly
+        id={fieldKey}
+        label={fieldDetails.label}
+        accept={fieldDetails.accept}
+        disabled={disabled}
+        {...stateHandler}
+      />
+    );
+  }
+
   return (
-    <TextField
-      name={fieldKey}
-      label={fieldDetails.label}
-      type={fieldDetails.type}
-      id={fieldKey}
-      accept={fieldDetails.accept}
-      fullWidth={fieldDetails.fullWidth || true}
-      required={!!fieldDetails.required}
-      InputLabelProps={setInputLabelProps()}
-      autoComplete={fieldDetails.autoComplete}
-      disabled={disabled}
-      variant="outlined"
-      {...stateHandler}
-    />
+    <div>
+      {fieldDetails.separateLabel && (
+        <div className="fieldLabel">{fieldDetails.label}</div>
+      )}
+      <TextField
+        name={fieldKey}
+        label={!fieldDetails.separateLabel && fieldDetails.label}
+        type={fieldDetails.type}
+        id={fieldKey}
+        accept={fieldDetails.accept}
+        fullWidth={fieldDetails.fullWidth || true}
+        required={!!fieldDetails.required}
+        InputLabelProps={setInputLabelProps()}
+        autoComplete={fieldDetails.autoComplete}
+        disabled={disabled}
+        variant="outlined"
+        {...stateHandler}
+      />
+    </div>
   );
 }
 

@@ -15,6 +15,7 @@ export default function Button(props) {
     loaderClassName,
     titleClassName,
     iconClassName,
+    withoutOnClick,
   } = props;
 
   const handleOnPress = () => {
@@ -26,9 +27,8 @@ export default function Button(props) {
   if (variant === 'text') {
     return (
       <div
-        onClick={handleOnPress}
+        {...(withoutOnClick ? {} : { onClick: handleOnPress })}
         className={disabled && s.disabled}
-        role="presentation"
       >
         {props.children}
       </div>
@@ -38,9 +38,8 @@ export default function Button(props) {
   return (
     <div className={`${s.container} ${containerClassName}`}>
       <div
-        onClick={handleOnPress}
+        {...(withoutOnClick ? {} : { onClick: handleOnPress })}
         className={disabled && s.disabled}
-        role="presentation"
       >
         <MaterialButton
           className={`${s.button} ${className} ${disabled && s.disabled}`}

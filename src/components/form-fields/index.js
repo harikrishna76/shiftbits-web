@@ -24,7 +24,7 @@ export default function FormFields(props) {
       item
       xs={12}
       sm={fieldDetails.halfWidth ? 6 : 12}
-      key={formKey + fieldDetails.key}
+      key={`${formKey + fieldDetails.key}_root`}
       className={`${s.root} ${className}`}
     >
       <Field {...props} />
