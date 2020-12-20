@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Grid } from '@material-ui/core';
 import ProductLayout from 'components/product-layout';
+import { AllGiftCards } from 'constants/giftCards';
 import GiftCardModal from './gift-card-modal';
-import { AllGiftCards } from './constants';
 import s from './Spends.module.scss';
 
 export default function Spends() {

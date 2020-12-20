@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Grid, Typography, Hidden } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import ProductLayout from 'components/product-layout';
 import Arrow from 'components/icons/arrow';
-import DATA from './constants.js';
+import DATA from 'constants/graphData';
 import s from './Buy.module.scss';
 
 const variations = [
@@ -29,16 +29,16 @@ export default function Buy() {
         <div className="spaceBetween">
           {activeTab === 'bitcoin' ? (
             <div className="center">
-              <img src="/images/bitcoin2.png" alt=""></img>
+              <img src="/images/bitcoin2.png" alt="" />
               <div>Bitcoin BTC</div>
             </div>
           ) : (
             <div>
-              <img src="/images/bitcoin2.png" alt=""></img>
+              <img src="/images/bitcoin2.png" alt="" />
             </div>
           )}
           <div className="center">
-            {Object.keys(cryptocurrency.graph_data).map(item => (
+            {Object.keys(cryptocurrency.graph_data).map((item) => (
               <div
                 style={{
                   backgroundColor: activeGraphPoint === item ? '#21bf73' : '',
@@ -61,7 +61,7 @@ export default function Buy() {
           </div>
         </div>
         <div className="spaceAround">
-          {variations.map(variation => (
+          {variations.map((variation) => (
             <div>
               <div className="center">
                 {variation.icon && (
@@ -88,7 +88,7 @@ export default function Buy() {
       justify="flex-end"
       className={s.identityVerificationCard}
     >
-      <img src="images/identity_verification.svg" alt=""></img>
+      <img src="images/identity_verification.svg" alt="" />
       <div className="fontWeightBold fontSize24">
         Complete Identity Verification
       </div>
