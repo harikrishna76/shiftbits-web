@@ -1,14 +1,30 @@
-import React from 'react';
-import { Grid, Typography, Hidden } from '@material-ui/core';
+import React, { useState } from 'react';
+import { Grid } from '@material-ui/core';
 import ProductLayout from 'components/product-layout';
+import BuyAndSell from 'components/buy-and-sell';
+import CurrencyGraph from 'components/currency-graph';
+import IdentityVerification from 'components/identity-verification';
 import s from './Sell.module.scss';
 
 export default function Sell() {
+  const [activeTab, setActiveTab] = useState('bitcoin');
+
+  const [activeCurrency, setActiveCurrency] = useState('INR');
+
   return (
     <ProductLayout activeNavigation="sell">
-      <Grid container alignItems="center" style={{ padding: '2rem 2rem 1rem' }}>
+      <Grid container className="pagePadding">
         <Grid item xs={12} md={6}>
-          <div style={{ textAlign: 'center' }}>Sell</div>
+          <BuyAndSell activeTab={activeTab} transactionType="sell" />
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <CurrencyGraph
+            activeTab={activeTab}
+            activeCurrency={activeCurrency}
+          />
+          <Grid className="flex" justify="flex-end">
+            <IdentityVerification />
+          </Grid>
         </Grid>
       </Grid>
     </ProductLayout>

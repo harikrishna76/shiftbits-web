@@ -1,0 +1,18 @@
+.identityVerificationCard {
+    margin: 8px 0 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px 0 rgba(25, 26, 31, 0.02), inset 0 4px 0 0 #21bf73;
+    border: 0.5px solid #d1d1d2;
+    padding: 1rem; //check
+    border-top: 2px solid #21bf73; //check
+    text-align: center;
+}
+  
+.submitButton {
+    background-color: #21bf73;
+    color: #ffffff;
+    height: 3.75rem;
+    border-radius: 5px;
+    margin-top: 2.5rem;
+    font-size: 1.125rem;
+}

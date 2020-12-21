@@ -1,0 +1,105 @@
+.root {
+    padding-right: 1.25rem !important;
+}
+
+.boxLayout {
+    border: solid 0.5px #d1d1d2;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+
+    .boxHeader {
+        font-family: HelveticaLTStd;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5;
+        color: #191a1f;
+        height: 4rem;
+        padding-left: 2.25rem;
+        border-bottom: solid 1px #d1d1d2;
+    }
+}
+
+.buySellTabRoot {
+    min-width: 0 !important;
+    opacity: 1 !important;
+    font-size: 1.25rem !important;
+    color: #a3a3a5 !important;
+    font-weight: bold !important;
+    text-transform: none !important;
+    box-shadow: inset 2px 0 5px 0 rgba(25, 26, 31, 0.05);
+    width: 60%;
+    background-color: rgba(25, 26, 31, 0.05) !important;
+}
+
+.currencyIcon {
+    width: 36px;
+    height: 36px;
+}
+
+.buySellTabIndicator {
+    height: 0 !important;
+}
+
+.selectedBuySellTab0 {
+    color: #f89f36 !important;
+    background-color: #ffffff !important;
+    box-shadow: none;
+}
+
+.selectedBuySellTab1 {
+    color: #6D75B6 !important;
+    background-color: #ffffff !important;
+    box-shadow: none;
+}
+
+.fieldsSection {
+    padding: 3rem 3rem;
+}
+
+.fieldContainer {
+    padding: 10px 16px;
+    width: 70%;
+    border-radius: 5px;
+    border: 0.5px solid #d1d1d2;
+
+    .inputField {
+        border-width: 0;
+    }
+      
+    .inputField:focus {
+        outline: none;
+    }
+}
+
+.transactionIconContainer {
+    width: 28px;
+    height: 28px;
+    border-radius: 16px;
+    border: 0.5px solid #6b6c6f;
+    transform: rotate(90deg);
+    margin: 32px auto;
+}
+
+.makeSureText {
+    margin: 1rem 0;
+    font-family: HelveticaLTStd-Roman;
+    font-size: 1rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #191a1f;
+
+    span {
+        color: #21bf73;
+    }
+}
+
+.proceedBtn {
+    margin-bottom: 2rem !important;
+}
+
+.proceedBtnTitle {
+    text-transform: capitalize !important;
+}
