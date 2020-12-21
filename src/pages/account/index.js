@@ -15,7 +15,7 @@ export default function SpacingGrid() {
           <KYCVerification />
           <BankDetails />
         </Grid>
-        <div className="center" style={{ height: '100px' }}>
+        <div className={`${s.statusSection} flex`}>
           <div className={s.statusIndicator}>
             <div className={s.statusLine} />
             <div className={s.activeLine} style={{ width: '50%' }} />
