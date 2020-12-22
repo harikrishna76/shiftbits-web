@@ -43,6 +43,10 @@ input,
   font-family: HelveticaLTStd-Roman !important;
 }
 
+.cryptoForNewBies .MuiTab-root  {
+  font-family: HelveticaLTStd !important;
+}
+
 input:disabled {
   background: transparent;
 }
@@ -175,6 +179,7 @@ input:disabled {
 
 .fontSize24 {
   font-size: 1.5rem !important;
+  font-family: HelveticaLTStd-Roman !important;
 }
 
 .fontSize20 {

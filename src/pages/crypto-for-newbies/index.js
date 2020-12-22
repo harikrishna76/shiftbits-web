@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Grid, Tabs, Tab, Typography,
-} from '@material-ui/core';
+import { Grid, Tabs, Tab, Typography } from '@material-ui/core';
 import Layout from 'components/layout';
 import CryptoContentViewer from './CryptoContentViewer';
 import s from './CryptoForNewbies.module.scss';
@@ -14,10 +12,30 @@ const cryptoNavigation = [
 ];
 
 const headerContent = [
-  { title: 'The History of Cryptocurrency', description: 'The origin, history, working, and the story of cryptocurrency are pretty darn interesting, and we think understanding them will help you appreciate the whole system a little more. ', date: '' },
-  { title: 'Basics of Crptocurrency', description: 'In this module, we highlight some key terms and points on cryptocurrrency, cryptography and Bitcoin.', date: '' },
-  { title: 'How does the technology work?', description: 'Satoshi Nakamoto mined the first block in the bitcoin network, thus implementing the blockchain technology. He/she/they published a paper describing to the world the workings of Bitcoin and blockchain technology.', date: '' },
-  { title: 'Fiat vs Cryptocurrency', description: 'In this module, we highlight some key terms and points on cryptocurrrency, cryptography and Bitcoin.', date: '' },
+  {
+    title: 'The History of Cryptocurrency',
+    description:
+      'The origin, history, working, and the story of cryptocurrency are pretty darn interesting, and we think understanding them will help you appreciate the whole system a little more. ',
+    date: '',
+  },
+  {
+    title: 'Basics of Crptocurrency',
+    description:
+      'In this module, we highlight some key terms and points on cryptocurrrency, cryptography and Bitcoin.',
+    date: '',
+  },
+  {
+    title: 'How does the technology work?',
+    description:
+      'Satoshi Nakamoto mined the first block in the bitcoin network, thus implementing the blockchain technology. He/she/they published a paper describing to the world the workings of Bitcoin and blockchain technology.',
+    date: '',
+  },
+  {
+    title: 'Fiat vs Cryptocurrency',
+    description:
+      'In this module, we highlight some key terms and points on cryptocurrrency, cryptography and Bitcoin.',
+    date: '',
+  },
 ];
 
 export default function CryptoForNewbies() {
@@ -43,7 +61,9 @@ export default function CryptoForNewbies() {
               <div className={`${s.introductionSubtitle} greyText`}>
                 {content.description}
               </div>
-              <Typography className="greyText">Updated July 15, 2020 &bull; 10 min read</Typography>
+              <Typography className="greyText">
+                Updated July 15, 2020 &bull; 10 min read
+              </Typography>
             </div>
           </Grid>
           <Grid item xs={12} md={5}>
@@ -78,7 +98,10 @@ export default function CryptoForNewbies() {
           <Typography
             align="center"
             className="fontWeightBold"
-            style={{ display: 'flex', flexDirection: next ? '' : 'row-reverse' }}
+            style={{
+              display: 'flex',
+              flexDirection: next ? '' : 'row-reverse',
+            }}
           >
             {next ? 'Next topic' : 'Previous'}
             <span>
@@ -118,10 +141,12 @@ export default function CryptoForNewbies() {
 
   return (
     <Layout activeTabIndex={2}>
-      <div className="flex">
+      <div className="flex cryptoForNewBies">
         <Tabs
           value={activeTabIndex}
-          onChange={(e, newValue) => { setActiveTabIndex(newValue); }}
+          onChange={(e, newValue) => {
+            setActiveTabIndex(newValue);
+          }}
           className={s.cryptoSubheader}
           classes={{ indicator: s.cryptoIndicator }}
         >

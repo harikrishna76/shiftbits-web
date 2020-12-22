@@ -135,7 +135,7 @@ export default function Home() {
               className={s.inputField}
               disabled={buySellTabIndex === 0}
             />
-            <img src="/images/bitcoin2.png" alt="" width={28} height={28} />
+            <img src="/images/bitcoin.svg" alt="" width={28} height={28} />
           </div>
         </div>
         <div

@@ -7,14 +7,14 @@
 }
 
 .aboutUsText1 {
-  font-family: HelveticaLTStd-Roman;
+  font-family: HelveticaLTStd-Roman !important;
   font-size: 1.5rem !important;
   line-height: 1.5;
   color: #6b6c6f;
 }
 
 .aboutUsText2 {
-  font-family: HelveticaLTStd-Roman;
+  font-family: HelveticaLTStd-Roman !important;
   font-size: 1.5rem !important;
   line-height: 1.5;
   color: #6b6c6f;
@@ -22,7 +22,7 @@
 }
 
 .aboutUsText3 {
-  font-family: HelveticaLTStd;
+  font-family: HelveticaLTStd !important;
   font-size: 3rem !important;
   font-weight: bold !important;
   line-height: 1.5;
@@ -38,7 +38,7 @@
 }
 
 .aboutUsText4 {
-  font-family: HelveticaLTStd;
+  font-family: HelveticaLTStd !important;
   font-size: 2.25rem !important;
   font-weight: bold !important;
   line-height: 1.5;
@@ -46,7 +46,7 @@
 }
 
 .aboutUsText5 {
-  font-family: HelveticaLTStd;
+  font-family: HelveticaLTStd !important;
   font-size: 3rem !important;
   font-weight: bold !important;
   line-height: 1.5;
@@ -77,10 +77,12 @@
 .memberRole {
   color: #a3a3a5;
   font-size: 1rem;
+  font-family: HelveticaLTStd-Roman !important;
 }
 
 .memberName {
   font-size: 1.125rem;
+  font-family: HelveticaLTStd-Roman !important;
 }
 
 .teamSocialIcon {
