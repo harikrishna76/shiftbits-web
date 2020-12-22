@@ -1,14 +1,46 @@
-body {
-  margin: 0;
+@font-face {
+  font-family: HelveticaLTStd-Roman;
+  font-style: normal;
+  font-weight: normal;
+  src: url(./fonts/HelveticaNeueLTStd-Roman.otf) format('opentype');
 }
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: HelveticaLTStd;
+  font-style: normal;
+  font-weight: normal;
+  src: url(./fonts/HelveticaNeueLTStd-Md.otf) format('opentype');
+}
+
+@font-face {
+  font-family: HelveticaLTStd;
+  font-style: normal;
+  font-weight: bold;
+  src: url(./fonts/HelveticaNeueLTStd-Bd.otf) format('opentype');
 }
 
 html {
   font-size: 16px;
+}
+
+body {
+  font-family: HelveticaLTStd;
+  font-weight: normal;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.MuiTypography-body1 {
+  font-family: HelveticaLTStd !important;
+}
+
+input,
+.MuiInputBase-input, 
+.MuiFormLabel-root, 
+.fieldLabel,
+.MuiTab-root {
+  font-family: HelveticaLTStd-Roman !important;
 }
 
 input:disabled {
@@ -408,7 +440,6 @@ input:disabled {
 }
 
 .fieldLabel {
-  font-family: HelveticaLTStd-Fractions;
   font-size: 1rem;
   line-height: 1.5;
   color: #191a1f;
