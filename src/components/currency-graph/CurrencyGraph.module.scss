@@ -1,40 +1,85 @@
 .graphCard {
-    border-radius: 5px;  //check
     border: 0.5px solid #d1d1d2;  //check
-    padding: 1rem; //check
     margin-bottom: 2.5rem;
+}
+
+.headerSection {
+    padding: 1rem;
+
+    .currencyName {
+        font-family: HelveticaLTStd-Roman;
+        font-size: 1.125rem;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        color: #191a1f;
+
+        img {
+            margin-right: 0.25rem;
+        }
+    }
+
+    .priceSummary {
+        margin-top: 1.5rem;
+        font-family: HelveticaLTStd;
+        font-size: 1.75rem;
+        font-weight: bold;
+        letter-spacing: 1.4px;
+        color: var(--black);
+    }
+
+    .priceChange {
+        font-family: HelveticaLTStd;
+        font-size: 1.125rem;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.9px;
+        color: #21bf73;
+        margin-top: 0.5rem;
+    }
+}
+
+.lineGraphWrapper {
+    position: relative;
+    padding: 0 2rem;
+    margin-top: 3rem;
+
+    .bottomLine {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 1px;
+        content: ' ';
+        width: 100%;
+        bottom: 25px;
+        background: #d1d1d2;
+    }
 }
 
 .graphPointBox {
     margin: 0 2px;
-    padding: 2px 8px;
+    padding: 6px 8px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .fontSize14 {
     font-size: 0.875rem;
 }
 
+.variations {
+    padding: 1.5rem 0 1rem;
+    border-top: 1px solid #d1d1d2;
+
+    .labelText {
+        height: 24px;
+    }
+}
+
 .variationIcon {
     width: 24px;
     height: 24px;
-}
-
-.identityVerificationCard {
-    margin: 8px 0 0;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px 0 rgba(25, 26, 31, 0.02), inset 0 4px 0 0 #21bf73;
-    border: 0.5px solid #d1d1d2;
-    padding: 1rem; //check
-    border-top: 2px solid #21bf73; //check
-    text-align: center;
-}
-
-.submitButton {
-    background-color: #21bf73;
-    color: #ffffff;
-    height: 3.75rem;
-    border-radius: 5px;
-    margin-top: 2.5rem;
-    font-size: 1.125rem;
 }

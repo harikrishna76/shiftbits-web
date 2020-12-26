@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './BuyAndSell.module.scss';
+import s from './BuyAndSellTransaction.module.scss';
 
 export default function BoxLayout(props) {
   const { header, children } = props;
