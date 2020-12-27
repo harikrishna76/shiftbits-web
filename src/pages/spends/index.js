@@ -18,7 +18,7 @@ export default function Spends() {
             ? `Search results for “${searchValue}”`
             : 'All gift cards'}
         </div>
-        <div>
+        <div className={`${s.searchInputWrapper} center`}>
           <input
             className={s.searchInput}
             type="text"
@@ -27,6 +27,7 @@ export default function Spends() {
               setSearchValue(event.target.value);
             }}
           />
+          <img src="/images/icons/mdi_search.svg" alt="" />
         </div>
       </div>
     );
@@ -44,21 +45,24 @@ export default function Spends() {
         <div className="flexWrap spaceBetween">
           {cards.map((giftCard) => (
             <div
-              className={`${s.card} center`}
+              className={`${s.cardWrapper}`}
               onClick={() => {
                 setShowGiftCardModal(true);
                 setActiveCard(giftCard);
               }}
               role="presentation"
             >
-              <img src={giftCard.logo} alt="" />
+              <div className={`${s.card} center`}>
+                <img src={giftCard.logo} alt="" />
+              </div>
+              <div className={s.cardTitle}>{giftCard.title}</div>
             </div>
           ))}
           {/* avoid problems with spacebetween 
               when number of cards are less than max can fit in row */}
-          <div className={`${s.card} visibilityHidden`} />
-          <div className={`${s.card} visibilityHidden`} />
-          <div className={`${s.card} visibilityHidden`} />
+          <div className={`${s.cardWrapper} visibilityHidden`} />
+          <div className={`${s.cardWrapper} visibilityHidden`} />
+          <div className={`${s.cardWrapper} visibilityHidden`} />
         </div>
       </div>
     );

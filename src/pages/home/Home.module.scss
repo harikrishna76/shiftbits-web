@@ -2,7 +2,7 @@
 }
 
 .homeBannerSection {
-  height: calc(100vh - 6.3rem);
+  min-height: calc(100vh - 6.3rem);
   display: flex;
   flex-direction: column !important;
 }

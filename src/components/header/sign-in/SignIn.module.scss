@@ -58,6 +58,7 @@
 
     .verificationCode {
         min-height: 7rem;
+        margin-top: 4rem;
     }
 
     .resendLink {
@@ -66,6 +67,28 @@
 
     .useAnotherNumber {
         margin: 0.75rem 0 1.5rem;
+    }
+
+    .otpInput {
+        padding: 1.5rem 1rem 1rem 1.125rem;
+        border-radius: 10px;
+        background: #f3f4f4;
+        border: 2px solid transparent;
+        margin-right: 1.5rem;
+        font-family: HelveticaLTStd !important;
+        font-size: 3rem;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        user-select: none;
+    }
+
+    .otpInput:focus {
+        outline: none;
+        border: 2px solid #21bf73;
+        background: white;
     }
 }
 
